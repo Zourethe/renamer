@@ -1,23 +1,36 @@
-# Modules.
+'''
+                            Renamer
+    
+    This is the main file of the script, the one that will rename the files.
+
+    Author: Zourethe
+    Date: July, 17, 2023
+'''
+
+# Libraries import.
 from os import rename, listdir
 from shutil import move
 
-# Variables.
+# Variables definition.
 option = int()
 
-# Lowercase function.
+# Lowercase function definition.
 def lowercase(path):
     for filenames in listdir(path):
+        # TODO: this will rename the files to their original name, but in lowercase, the renamed files will appear in the folder that the script is located.
         rename('{}\{}'.format(path, filenames), filenames.lower())
+        # TODO: this will move the files from the folder that the script is located to their original path.
         move(filenames.lower(), path)
 
-# Uppercase function.
+# Uppercase function definition.
 def uppercase(path):
     for filenames in listdir(path):
+        # TODO: this will rename the files to their original name, but in uppercase, the renamed files will appear in the folder that the script is located.
         rename('{}\{}'.format(path, filenames), filenames.upper())
+        # TODO: this will move the files from the folder that the script is located to their original path.
         move(filenames.upper(), path)
 
-# Options selection.
+# Options selection menu.
 print('Options:')
 print('1 - Uppercase.')
 print('2 - Lowercase.')
