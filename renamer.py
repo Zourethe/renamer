@@ -7,11 +7,11 @@
     Date: July, 17, 2023
 '''
 
-# Imports.
+# Libraries imports.
 from os import rename, listdir
 from shutil import move
 
-# Variables.
+# Variables definition.
 option = int()
 
 # Lowercase function.
@@ -27,10 +27,15 @@ def uppercase(path):
         move(filenames.upper(), path)
 
 # Options selector.
+print('\033[32m{}\033[0m'.format('                  Renamer'))
+print('')
 print('Options:')
 print('1 - Uppercase.')
 print('2 - Lowercase.')
 print('3 - Exit.')
+print('')
+print('Script by Zourethe')
+print('')
 
 # Options conditions.
 while True:
